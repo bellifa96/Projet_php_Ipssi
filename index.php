@@ -33,13 +33,13 @@ session_start();
 if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
 {
     echo 'Bonjour ' . $_SESSION['pseudo'];
-    echo "<br><a href="."./View/insert_sujet.php".">Insérer un sujet</a>";
-    echo "<br><a href="."./Controller/deconnexion.php".">Déconnexion</a>";
+    echo "<br><a href="."./insert_sujet.php".">Insérer un sujet</a>";
+    echo "<br><a href="."./deconnexion.php".">Déconnexion</a>";
 
 }
 else{
-	echo "<br><a href="."./Controller/connexion.php".">Se connecter</a>";
-	echo "<br><a href="."./Controller/inscription.php".">S'inscrire</a>";
+	echo "<br><a href=".".connexion.php".">Se connecter</a>";
+	echo "<br><a href="."./inscription.php".">S'inscrire</a>";
 }
 	
 ?>
@@ -48,7 +48,7 @@ else{
 
 <br/><br/>
 <?php
-include_once("../Model/bddc.php");
+include_once(".bddc.php");
 $sql = $bdd->prepare('SELECT posts.id,title,content,username,name from posts inner join users on posts.idUser=users.id inner join categories on posts.idCategory= categories.id;
 ');
 $sql->execute();
