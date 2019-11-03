@@ -8,7 +8,7 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
 
 }
 else{
-	header('Location:../index.php');
+	header('Location:index.php');
   	exit;
 }
 // on teste si le formulaire a été soumis
@@ -26,7 +26,7 @@ if (isset ($_POST['go']) && $_POST['go']=='Poster') {
 	else {
 		echo $_GET['numero_du_sujet'];
 		// on se connecte à notre base de données
-		include_once("../Model/bddc.php");
+		include_once("bddc.php");
 
 		// on recupere la date de l'instant présent
 		$id_post=$_GET['numero_du_sujet'];
