@@ -50,7 +50,7 @@ else {
 	</td></tr>
 <?php
 	// on se connecte à notre base de données
-	include_once("../Model/bddc.php");
+	include_once("bddc.php");
 	// on prépare notre requête // on recupere le contenu et le titre de l'id=id
 	$id = $_GET['id_sujet_a_lire'];
 	$sql = $bdd->prepare('SELECT posts.content,title FROM posts where posts.id = :id');
