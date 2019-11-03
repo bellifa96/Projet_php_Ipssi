@@ -1,5 +1,5 @@
 <?php 
-include_once('../Model/bddc.php');
+include_once('bddc.php');
 $pseudo = $_POST['id'];
 //$req=$bdd->prepare('SELECT id,username, password FROM users WHERE username = :pseudo');
 //$req->execute(array('pseudo' => $pseudo));
@@ -19,7 +19,7 @@ else
         $_SESSION['pseudo'] = $pseudo;
         echo 'Vous êtes connecté !';
         //echo $_SESSION['pseudo'];
-        header('location: ../index.php');
+        header('location: index.php');
         exit;
     }
     else {
