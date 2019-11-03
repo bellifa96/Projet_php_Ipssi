@@ -19,7 +19,7 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
   // si tout est bon, on peut commencer l'insertion dans la base
   else {
     // on se connecte à notre base
-    include_once("../Model/bddc.php");
+    include_once("bddc.php");
     set_category($_POST['Categories']);
 
     if (get_category($_POST['Categories'])){
@@ -35,7 +35,7 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
 
 
     // on redirige vers la page d'accueil
-    header('Location: ../index.php');
+    header('Location: index.php');
 
     // on termine le script courant
     exit;
